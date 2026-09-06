@@ -1,17 +1,21 @@
-## solving pendulum problem by using ode45
+pendulm problem
+%pendulm 문제를 ode45를 사용하여 상태방정식으로 만들고 진자의 운동을 다양하게 분석해본다.
 
-#📌개요
-pendulm 문제를 ode45를 사용하여 상태방정식으로 만들고 진자의 운동을 다양하게 분석해본다.
+%θ″ + b/ml^2 θ' + g*sinθ / l = T/ml^2
 
-#🛠️pendulm problem
--How to solve?
-θ″ + b/ml^2 θ' + g*sinθ / l = T/ml^2
+%θ″ : 진자가 원점으로부터 운동한 각도
+%l : 줄의 길이
+%m : 진자의 질량
+%g : 중력가속도
+%T = 외력 토크
+%b = 점성마찰계수
+%assume l=g=m=1 T = 0 
+%-상태방정식은 1개 이상의 미분항은 허용되지 않는다.
 
-θ″ : 진자가 원점으로부터 운동한 각도
-l : 줄의 길이
-m : 진자의 질량
-g : 중력가속도
-T = 외력 토크
-b = 점성마찰계수
+% x1 = θ x2 = θ'
 
--상태방정식은 1개 이상의 미분항은 허용되지 않는다.
+x2'+b*x2+sin(x1) = 0
+function [dx] = pend1(t,x)
+b = 0.3
+dx(1) = x(2)
+
