@@ -7,6 +7,8 @@
 
 # Solving mechanical problems
 *pendulub problem
-*
+* mess-string-demper
+* Quarter Car Model
+* Bicycle Model
 # 🚗 Vehicle Dynamics & Control
 
